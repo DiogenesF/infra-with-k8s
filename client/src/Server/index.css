@@ -1,0 +1,16 @@
+h3 {
+    margin-bottom: 10px;
+}
+h5 {
+    margin: 0px;
+}
+h5:last-child {
+    margin-bottom: 10px;
+}
+
+.division {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
