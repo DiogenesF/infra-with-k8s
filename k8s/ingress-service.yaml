@@ -24,3 +24,10 @@ spec:
                 name: server-cluster-ip-service
                 port:
                   number: 5000
+          - path: /microservice/?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: microservice-cluster-ip-service
+                port:
+                  number: 4000

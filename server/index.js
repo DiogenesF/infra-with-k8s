@@ -1,4 +1,5 @@
 const keys = require("./keys");
+const os = require('os');
 
 // Express App Setup
 const express = require("express");
@@ -31,12 +32,14 @@ app.post("/create", (req, res) => {
 
   pgClient.query("INSERT INTO records(name) VALUES($1)", [recordName]);
 
+  console.log("You have hit " + os.hostname() + "\n");
+
   res.status(201).send({ message: "Record successfully created" });
 });
 
 app.get("/records", async (req, res) => {
   const values = await pgClient.query("SELECT * from records");
-
+  console.log("You have hit " + os.hostname() + "\n");
   res.send(values.rows);
 });
 
