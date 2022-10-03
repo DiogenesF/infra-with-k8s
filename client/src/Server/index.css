@@ -7,10 +7,3 @@ h5 {
 h5:last-child {
     margin-bottom: 10px;
 }
-
-.division {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}

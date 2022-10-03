@@ -27,29 +27,19 @@ export const Server = () => {
     }
 
     return (
-        <div className="division">
-            <div className="aligned-content">
-                <label>
-                    Create a record: <br />
-                    <input ref={ref} type="text" name="name" />
-                </label>
-                <button className="submit-button" onClick={onSubmit}>
-                    Create
-                </button>
-                <hr />
-                <h3>Records in the database:</h3>
-                {records?.map(({ name }, index) => (
-                    <h5 key={index}>{name}</h5>
-                ))}
-            </div>
-            <div className="aligned-content">
-                <button
-                    style={{ backgroundColor: '#ddc223' }}
-                    className="submit-button"
-                >
-                    Make it break
-                </button>
-            </div>
+        <div className="aligned-content">
+            <label>
+                Create a record: <br />
+                <input ref={ref} type="text" name="name" />
+            </label>
+            <button className="submit-button" onClick={onSubmit}>
+                Create
+            </button>
+            <hr />
+            <h3>Records in the database:</h3>
+            {records?.map(({ name }, index) => (
+                <h5 key={index}>{name}</h5>
+            ))}
         </div>
     )
 }
