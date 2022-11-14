@@ -1,3 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: microservice-cluster-ip-service
+spec:
+  type: ClusterIP
+  selector:
+    component: microservice
+  ports:
+    - port: 4000
+      targetPort: 4000
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:

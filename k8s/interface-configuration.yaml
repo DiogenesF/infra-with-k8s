@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: interface-cluster-ip-service
+spec:
+  type: ClusterIP
+  selector:
+    component: interface
+  ports:
+    - port: 3000
+      targetPort: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: interface-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      component: interface
+  template:
+    metadata:
+      labels:
+        component: interface
+    spec:
+      containers:
+        - name: interface
+          image: diogenesfiorezi/interface:latest
+          ports:
+            - containerPort: 3000
