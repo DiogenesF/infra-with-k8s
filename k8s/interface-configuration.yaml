@@ -29,3 +29,10 @@ spec:
           image: diogenesfiorezi/interface:latest
           ports:
             - containerPort: 3000
+          resources:
+            requests:
+              memory: "5M"
+              cpu: "10m"
+            limits:
+              memory: "10M"
+              cpu: "20m"

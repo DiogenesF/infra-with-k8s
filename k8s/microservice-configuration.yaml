@@ -29,3 +29,10 @@ spec:
           image: diogenesfiorezi/microservice:latest
           ports:
             - containerPort: 4000
+          resources:
+            requests:
+              memory: "50M"
+              cpu: "20m"
+            limits:
+              memory: "100M"
+              cpu: "40m"

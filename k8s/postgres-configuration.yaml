@@ -40,3 +40,10 @@ spec:
           env:
             - name: POSTGRES_PASSWORD
               value: postgres_password
+          resources:
+            requests:
+              memory: "50M"
+              cpu: "20m"
+            limits:
+              memory: "100M"
+              cpu: "40m"
