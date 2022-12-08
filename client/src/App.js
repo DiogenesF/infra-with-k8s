@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
-import { Server } from './server'
-import { Microservice } from './microservice'
+import { Server } from './Server'
+import { Microservice } from './Microservice'
 
 const App = () => {
     const [view, setView] = useState('server')
